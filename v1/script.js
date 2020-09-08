@@ -1,6 +1,9 @@
-var panorama1, panorama2, panorama3, viewer, container, infospot;
+var panorama1, panorama2, panorama3, viewer, container, infospot1;
 
 var bar = document.querySelector( '#bar' );
+
+
+
 
 function onProgressUpdate ( event ) {
   var percentage = event.progress.loaded/ event.progress.total * 100;
@@ -15,18 +18,14 @@ function onProgressUpdate ( event ) {
 
 container = document.querySelector( '#container' );
 
-panorama1 = new PANOLENS.ImagePanorama( './op1' );
+panorama1 = new PANOLENS.ImagePanorama( './op1.png' );
 panorama1.addEventListener( 'progress', onProgressUpdate );
 
-panorama2 = new PANOLENS.ImagePanorama( './op1' );
+panorama2 = new PANOLENS.ImagePanorama( './op2.png' );
 panorama2.addEventListener( 'progress', onProgressUpdate );
 
-panorama3 = new PANOLENS.ImagePanorama( './op1' );
+panorama3 = new PANOLENS.ImagePanorama( './op3.png' );
 panorama3.addEventListener( 'progress', onProgressUpdate );
-
-infospot = new PANOLENS.Infospot( 350, PANOLENS.DataImage.Info );
-
-panorama1.add( infospot );
 
 viewer = new PANOLENS.Viewer( { container: container } );
 viewer.add( panorama1, panorama2, panorama3 );

@@ -2,15 +2,15 @@ var panorama1, panorama2, panorama3, viewer, container, infospot1, infospot2, in
 
 infospot1 = new PANOLENS.Infospot( 300, PANOLENS.DataImage.Info );
       infospot1.position.set( 5000.00, -665.23, -3996.49 );
-      infospot1.addHoverElement( document.getElementById( 'desc-container' ),80);
+      infospot1.addHoverElement( document.getElementById( 'desc-container' ),150);
 
 infospot2 = new PANOLENS.Infospot( 300, PANOLENS.DataImage.Info );
       infospot2.position.set( 5000.00, -665.23, -3996.49 );
-      infospot2.addHoverElement( document.getElementById( 'desc-container' ),80);
+      infospot2.addHoverElement( document.getElementById( 'desc-container' ),150);
 
 infospot3 = new PANOLENS.Infospot( 300, PANOLENS.DataImage.Info );
       infospot3.position.set( 5000.00, -665.23, -3996.49 );
-      infospot3.addHoverElement( document.getElementById( 'desc-container' ),80);
+      infospot3.addHoverElement( document.getElementById( 'desc-container' ),150);
 
 var bar = document.querySelector( '#bar' );
 

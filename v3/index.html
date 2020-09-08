@@ -19,6 +19,23 @@
 	 color: #bdc3c7;
 	}
 
+	#progress {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	}
+
+	#bar {
+	background-color: #fff;
+	height: 100%;
+	transition: width 0.1s ease;
+	}
+
+	#bar.hide {
+	opacity: 0;
+	transition: opacity 1s ease;
+	}
+
 	#container {
 	  width: 100%;
 	  height: 100%;
@@ -57,15 +74,16 @@
 	}
 
 	#desc-container {
-	  max-width: 500px;
-	  max-height: 500px;
-	  min-width: 150px;
-	  min-height: 100px;
+	  width: 200px;
+	  height: 250px;
 	  background: #fff;
 	  color: #000;
-	  border-radius: 3px;
+	  border-radius: 20px;
 	  overflow: auto;
-	  -webkit-overflow-scrolling: touch;
+	  border-style: solid;
+  border-color: #c9c6c5;
+	 
+	  
 	}
 
 	#desc-container >  {
@@ -95,13 +113,14 @@
 
 
  <div id="desc-container" style="display:none">
+	
+	<div class="title"></div>
+    <div class="title">Mesa de centro</div>
+    <div class="text">Texto</div>
 
-      <div class="title">Titulo</div>
-      <div class="text">Texto</div>
-
-	<button id="btn1" class="btn-default">1</button>
-	<button id="btn2" class="btn-default">2</button>
-	<button id="btn3" class="btn-default">3</button>
+	<input type="button" id="btn1" class="btn-default" value="1">
+	<input type="button" id="btn2" class="btn-default" value="1">
+	<input type="button" id="btn3" class="btn-default" value="1">
     </div>
 <!-- partial -->
   <script src='https://pchen66.github.io/js/three/three.min.js'></script>
